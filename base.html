@@ -1,0 +1,72 @@
+<html>
+
+<head>
+{% block title %}
+<title> {{ title }} </title>
+{% endblock title %}
+
+{% block link %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='style1.css')}}">
+{% endblock link %}
+<style>
+#cnav {
+  margin-left: -1400px;
+}
+</style>
+</head>
+
+<body>
+
+{% block container %}
+<div id="container">
+	<div id="header">
+	<h1>Go Python Man</h1>
+	</div><br><br><br>
+</div>	
+{% endblock container %}
+
+{% block main %}
+<div id="main">
+	<h3>{{ Page }}</h3><br>
+	<p>{{ Stuff }}</p>
+	<br><br>
+{% endblock main %}
+
+{% block nav %}
+<div id="cnav">
+<div id="content">
+        <div id="nav">
+                <h2>Navigation</h2>
+
+                <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/advert">Advert</a></li>
+                        <li><a href="/test">Test</a></li>
+                </ul><br><br>
+
+                </div>
+        </div>
+</div>
+<br><br><br><br><br><br>
+{% endblock nav %}
+
+
+{% block pic %}
+<br><br><br><br><br><br><h3>More Content to come Soon</h3>
+<image src="{{ url_for('static', filename='images/py2.png')}}" align="middle" height="250" width="650"/>
+{% endblock pic %}    			
+
+<br><br></div>
+	</div>
+
+{% block footer %}
+<div id="footer">
+	Powered by MacMedia
+{% endblock footer %}
+</div>
+
+</body>
+
+</html>
